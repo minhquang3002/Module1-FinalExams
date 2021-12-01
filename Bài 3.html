@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demNguyenAm(chuoi) {
+        let nguyenAm = [ "a", "o", "e", "u", "i"];
+        let dem = 0;
+        for (let i = 0; i < chuoi.length; i++) {
+            for (let j = 0; j < nguyenAm.length; j++) {
+                if (chuoi[i].toLowerCase() === nguyenAm[j]) {
+                    dem++;
+                }
+            }
+        }
+        if (dem === 0) {
+            return false;
+        } else {
+            return dem;
+        }
+    }
+
+    let chuoi = "HelloWorld";
+    alert("Dãy có tổng cộng " +demNguyenAm(chuoi) + " ký tự nguyên âm");
+</script>
+</body>
+</html>
